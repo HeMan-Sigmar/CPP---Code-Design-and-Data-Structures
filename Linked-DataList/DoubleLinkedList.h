@@ -11,11 +11,11 @@ class DoubleLinkedList
 	private:
 		node* heads;
 		node* tails;
-	public:
-		DoubleLinkedList();
-		~DoubleLinkedList();
-
+	
 	};
+public:
+	DoubleLinkedList();
+	~DoubleLinkedList();
 
 };
 
