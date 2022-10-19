@@ -99,7 +99,33 @@ bool DoubleLinkedList::IsEmpty()
 {
 	return head == nullptr;
 }
-DoubleLinkedList::Node* DoubleLinkedList::GetFunc(int num)
+DoubleLinkedList::Node* DoubleLinkedList::GetFunc(int index)
+{
+	Node* output = head;
+	int num = 0;
+	while (num <= index && output->next != nullptr)
+	{
+		output = output->next;
+	}
+	return output;
+}
+void DoubleLinkedList::Display(Node* node)
+{
+	
+	while (node != nullptr)
+	{
+		cout << node->data << "<==>";
+		tail = node;
+		node = node->next;
+	}
+	if (node == nullptr)
+		cout << "NULL";
+}
+DoubleLinkedList:: DoubleLinkedList()
+{
+
+}
+DoubleLinkedList:: ~DoubleLinkedList() 
 {
 
 }

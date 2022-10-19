@@ -23,6 +23,7 @@ public:
 	int Count();
 	bool IsEmpty();
 	Node* GetFunc(int num);
+	void Display(Node* node);
 
 private:
 	int count = 0;
