@@ -5,6 +5,8 @@ using namespace std;
 void DoubleLinkedList::AddHead(int data)
 {
 	Node* node = new Node;
+	node->next = head;
+	node->prev = nullptr;
 	node->data = data;
 	if (head != nullptr)
 	{
@@ -20,6 +22,8 @@ void DoubleLinkedList::AddHead(int data)
 void DoubleLinkedList::AddTail(int data)
 {
 	Node* node = new Node;
+	node->prev = tail;
+	node->next = nullptr;
 	node->data = data;
 	if (tail != nullptr)
 	{
@@ -51,6 +55,7 @@ void DoubleLinkedList::Add(Node* location, int data)
 	next->prev = node;
 	node->next = next;
 	location->next = node;
+	node->prev = location;
 	count += 1;
 }
 
@@ -103,20 +108,20 @@ DoubleLinkedList::Node* DoubleLinkedList::GetFunc(int index)
 {
 	Node* output = head;
 	int num = 0;
-	while (num <= index && output->next != nullptr)
+	while (num < index && output->next != nullptr)
 	{
+		++num;
 		output = output->next;
 	}
 	return output;
 }
 void DoubleLinkedList::Display(Node* node)
 {
-	
-	while (node != nullptr)
+	Node* last = node;
+	while (last!= nullptr)
 	{
-		cout << node->data << "<==>";
-		tail = node;
-		node = node->next;
+		cout << last->data << "<==>";
+		last = last->next;
 	}
 	if (node == nullptr)
 		cout << "NULL";
