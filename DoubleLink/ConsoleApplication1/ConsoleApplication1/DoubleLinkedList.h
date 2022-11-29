@@ -24,6 +24,7 @@ public:
 	bool IsEmpty();
 	Node* GetFunc(int num);
 	void Display(Node* node);
+	void Dllcreation(int n);
 
 private:
 	int count = 0;

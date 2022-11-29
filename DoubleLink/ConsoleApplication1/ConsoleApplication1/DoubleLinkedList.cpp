@@ -38,24 +38,50 @@ void DoubleLinkedList::AddTail(int data)
 }
 void DoubleLinkedList::Add(Node* location, int data)
 {
-	
-	if (head = nullptr)
-	{
-		AddHead(data);
+	//
+	//if (head = nullptr)
+	//{
+	//	AddHead(data);
+	//	return;
+	//}
+	//Node* next = location->next;
+	//if (next == nullptr)
+	//{
+	//	AddTail(data);
+	//	return;
+	//}
+	//Node* node = new Node;
+	//node->data = data;
+	//next->prev = node;
+	//node->next = next;
+	//location->next = node;
+	//node->prev = location;
+
+
+	// check if previous node is null
+	if (location == nullptr) {
+		cout << "previous node cannot be null";
 		return;
 	}
-	Node* next = location->next;
-	if (next == nullptr)
-	{
-		AddTail(data);
-		return;
-	}
-	Node* node = new Node;
-	node->data = data;
-	next->prev = node;
-	node->next = next;
-	location->next = node;
-	node->prev = location;
+
+	// allocate memory for newNode
+	Node* newNode = new Node;
+
+	// assign data to newNode
+	newNode->data = data;
+
+	// set next of newNode to next of prev node
+	newNode->next = location->next;
+
+	// set next of prev node to newNode
+	location->next = newNode;
+
+	// set prev of newNode to the previous node
+	newNode->prev = location;
+
+	// set prev of newNode's next to newNode
+	if (newNode->next != NULL)
+		newNode->next->prev = newNode;
 	count += 1;
 }
 
@@ -102,7 +128,15 @@ int DoubleLinkedList::Count()
 }
 bool DoubleLinkedList::IsEmpty()
 {
-	return head == nullptr;
+	if (head->next == head && head->data == 0)
+	{
+		return true;
+	}
+	else
+	{
+		return false;
+	}
+	
 }
 DoubleLinkedList::Node* DoubleLinkedList::GetFunc(int index)
 {
@@ -115,17 +149,17 @@ DoubleLinkedList::Node* DoubleLinkedList::GetFunc(int index)
 	}
 	return output;
 }
-void DoubleLinkedList::Display(Node* node)
-{
-	Node* last = node;
-	while (last!= nullptr)
-	{
-		cout << last->data << "<==>";
-		last = last->next;
-	}
-	if (node == nullptr)
-		cout << "NULL";
-}
+//void DoubleLinkedList::Display(Node* node)
+//{
+//	Node* last = node;
+//	while (last!= nullptr)
+//	{
+//		cout << last->data << "<==>";
+//		last = last->next;
+//	}
+//	if (node == nullptr)
+//		cout << "NULL";
+//}
 DoubleLinkedList:: DoubleLinkedList()
 {
 
@@ -133,4 +167,49 @@ DoubleLinkedList:: DoubleLinkedList()
 DoubleLinkedList:: ~DoubleLinkedList() 
 {
 
+}
+
+//void DoubleLinkedList::Dllcreation(int n)
+//{
+//	int i, num;
+//	Node* fnNode;
+//
+//	if (n >= 1)
+//	{
+//		head = (Node*)malloc(sizeof(Node));
+//
+//		if (head != NULL)
+//		{
+//			printf(" Input data for node 1 : "); // assigning data in the first node
+//			scanf("%d", &data);
+//
+//			head->data = num;
+//			head->prev = NULL;
+//			head->next = NULL;
+//			tail = head;
+//			for (i = 2; i <= n; i++)
+//			{
+//				fnNode = (Node*)malloc(sizeof(Node));
+//				if (fnNode != NULL)
+//				{
+//					printf(" Input data for node %d : ", i);
+//					scanf("%d", &num);
+//					fnNode->data = num;
+//					fnNode->prev = tail;    // new node is linking with the previous node
+//					fnNode->next = NULL;     // set next address of fnnode is NULL
+//					tail->next = fnNode;   // previous node is linking with the new node
+//					tail = fnNode;            // assign new node as last node
+//				}
+//				else
+//				{
+//					printf(" Memory can not be allocated.");
+//					break;
+//				}
+//			}
+//		}
+//		else
+//		{
+//			printf(" Memory can not be allocated.");
+//		}
+	}
 }
