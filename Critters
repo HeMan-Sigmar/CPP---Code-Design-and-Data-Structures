@@ -1,6 +1,6 @@
-<mxfile host="app.diagrams.net" modified="2022-12-06T11:56:22.359Z" agent="5.0 (Windows)" etag="pFH1ISVW2E1CwSifkaFx" version="20.4.0" type="github">
+<mxfile host="app.diagrams.net" modified="2022-12-06T12:19:09.039Z" agent="5.0 (Windows)" etag="88HOX1q1OI1wKOgDNo0P" version="20.4.0" type="github">
   <diagram id="sZC2rg4J1k4d3WsoJkSg" name="Page-1">
-    <mxGraphModel dx="2200" dy="800" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+    <mxGraphModel dx="1467" dy="533" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -78,6 +78,27 @@
         </mxCell>
         <mxCell id="5l_LQsKTBbt2dNAlM7DW-44" value="   IsDead(): Bool" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" vertex="1" parent="5l_LQsKTBbt2dNAlM7DW-1">
           <mxGeometry y="624" width="200" height="26" as="geometry" />
+        </mxCell>
+        <mxCell id="5l_LQsKTBbt2dNAlM7DW-55" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0;exitY=0.25;exitDx=0;exitDy=0;entryX=0.985;entryY=-0.244;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1" source="5l_LQsKTBbt2dNAlM7DW-45" target="5l_LQsKTBbt2dNAlM7DW-4">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="5l_LQsKTBbt2dNAlM7DW-45" value="Destroyer" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=26;fillColor=none;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;" vertex="1" parent="1">
+          <mxGeometry x="620" y="86" width="140" height="52" as="geometry" />
+        </mxCell>
+        <mxCell id="5l_LQsKTBbt2dNAlM7DW-51" value="Main" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=26;fillColor=none;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;" vertex="1" parent="1">
+          <mxGeometry x="10" y="76" width="140" height="104" as="geometry" />
+        </mxCell>
+        <mxCell id="5l_LQsKTBbt2dNAlM7DW-52" value="+ field: type" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" vertex="1" parent="5l_LQsKTBbt2dNAlM7DW-51">
+          <mxGeometry y="26" width="140" height="26" as="geometry" />
+        </mxCell>
+        <mxCell id="5l_LQsKTBbt2dNAlM7DW-53" value="+ field: type" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" vertex="1" parent="5l_LQsKTBbt2dNAlM7DW-51">
+          <mxGeometry y="52" width="140" height="26" as="geometry" />
+        </mxCell>
+        <mxCell id="5l_LQsKTBbt2dNAlM7DW-54" value="+ field: type" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" vertex="1" parent="5l_LQsKTBbt2dNAlM7DW-51">
+          <mxGeometry y="78" width="140" height="26" as="geometry" />
+        </mxCell>
+        <mxCell id="5l_LQsKTBbt2dNAlM7DW-56" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0;exitY=0.5;exitDx=0;exitDy=0;entryX=1.012;entryY=-0.449;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1" source="5l_LQsKTBbt2dNAlM7DW-3" target="5l_LQsKTBbt2dNAlM7DW-53">
+          <mxGeometry relative="1" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
