@@ -16,15 +16,16 @@ public:
 
 	void AddHead(int data);
 	void AddTail(int data);
-	void Add(Node* location, int data);
+	void Add(int location, int data);
 	void RemoveHead();
 	void RemoveTail();
-	void Remove(Node* value);
+	void Remove(int value);
 	int Count();
 	bool IsEmpty();
 	Node* GetFunc(int num);
-	void Display(Node* node);
+	void Display(int node);
 	void Dllcreation(int n);
+	void BubbleSort(Node* start);
 
 private:
 	int count = 0;
